@@ -26,16 +26,6 @@ header{
     justify-content: space-between;
 }
 
-header button{
-    border: none;
-    background-color: #e1ad12;
-    padding: 0 12px 0 12px;
-    border-radius: 5px;
-    color: #f1f1f1;
-    font-size: 1.2rem;
-    height: 30px;
-}
-
 .hide{
     display: none!important;
 }
@@ -72,7 +62,7 @@ header button{
     color: #f1f1f1;
     height: 50px;
     font-size: 2rem;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 30px;
     cursor: pointer;
 }
