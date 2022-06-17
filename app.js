@@ -39,6 +39,7 @@ const init = () => {
         inGame = false;
         displayMenu();
     })
+
     randomPosition();
 
     startButtonElementHard.addEventListener('click', () => {
@@ -57,11 +58,11 @@ const setupHard = () => {
     ballElement.style.transition = 'top 10ms, left 10ms'
 }
 
-const start = (hard = false) => {
+const start = () => {
     let time = config.timeGame;
+    inGame = true;
     displayStartGame();
     resetPoints();
-    inGame = true;
 
     if (config.difficulty == "hard"){
         const move = setInterval(() => {
@@ -110,7 +111,7 @@ const stopGame = (points) => {
 
     if (record === null || points > record){
         localStorage.setItem('recordAimspeed', points);
-        localStorage.setItem('recordAimspeedCPS', (points / config.timeGame).toFixed(3));
+        localStorage.setItem('recordAimspeedCPS', (points / config.timeGame).toFixed(2));
     }
 
     checkRecord();
@@ -143,9 +144,10 @@ const displayMenu = () => {
 
 const checkRecord = () => {
     const record = localStorage.getItem('recordAimspeed');
+    const cps = localStorage.getItem('recordAimspeedCPS');
 
     if(record !== null){
-        recordElement.innerText = record;
+        recordElement.innerText = record+ " ("+cps+ " cliques par seconde)";
         recordContainerElement.classList.remove('hide');
     };
 }
