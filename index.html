@@ -4,9 +4,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css">
     <title>Aimspeed</title>
 </head>
 <body>
+ <header class="header-center">
+     <h1>Aimspeed</h1>
+     <div class="time-info hide">
+         Temps restant : <span id="timer"></span> s
+     </div>
+ </header>
+ <main>
+     <div id="record-container" class="start-end hide">
+         <h2>Votre record : <span id="record">0</span></h2>
+     </div>
+     <div id="start" class="start-end">
+         <h2>Venez tester votre rapidité et vos réflexes sur Aimspeed</h2>
+         <p>Le but est de cliquer sur un maximum de balles en 20 secondes</p>
+         <button>Commencer</button>
+     </div>
+     <div id="end" class="start-end hide">
+         <button>Recommencer</button>
+         <h2>Votre score :</h2>
+     </div>
+     <div id="ball" class="hide"></div>
+     <span id="score" class="score hide">0</span>
 
+ </main>
 </body>
 </html>
